@@ -69,6 +69,6 @@ def ask_pwd(another_pwd=False):
 if __name__ == '__main__':
     print('+++ welcome to PWD checker +++')
     ask_pw = ask_pwd()
-    while check_pwd:
+    while ask_pw:
         check_pwd()
         ask_pw = ask_pwd(True)
