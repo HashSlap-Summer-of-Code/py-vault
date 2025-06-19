@@ -1,4 +1,5 @@
 run = "python cybersec-tools/password-strength.py"
+
 modules = ["python-3.11"]
 
 [nix]

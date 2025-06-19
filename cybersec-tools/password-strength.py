@@ -1,74 +1,47 @@
-import string
-import getpass
+import re
 
-def check_pwd():
-    password = getpass.getpass("Enter Password: ")
-    strength = 0
-    remarks = ''
-    lower_count = upper_count = num_count = wspace_count = special_count = 0
+def check_strength(password):
+    length = len(password)
+    score = 0
+    suggestions = []
 
-    for char in list(password):
-        if char in string.ascii_lowercase:
-            lower_count += 1
-        elif char in string.ascii_uppercase:
-            upper_count +=1
-        elif char in string.digits:
-            num_count += 1
-        elif char == ' ':
-            wspace_count +=1
-        else:
-            special_count +=1
-
-    if lower_count >= 1:
-        strength +=1
-    if upper_count >= 1:
-        strength +=1
-    if num_count >= 1:
-        strength +=1
-    if wspace_count>=1:
-        strength +=1
-    if special_count>=1:
-        strength +=1
-
-    if strength == 1:
-        remarks = "Very Bad Password!!! Change ASAP"
-    elif strength == 2:
-        remarks = "Not A Good Password!!! Change ASAP"
-    elif strength ==3:
-        remarks = "It's a weak password, consider changing"
-    elif strength == 4:
-        remarks = "It's a hard password, but can be better"
-    elif strength == 5:
-        remarks = "A very strong password"
-
-    print('Your password has: ')
-    print(f"{lower_count} lowercase characters")
-    print(f"{upper_count} uppercase characters")
-    print(f"{num_count} numeric characters")
-    print(f"{wspace_count} whitespace characters")
-    print(f"{special_count} special characters")
-
-    print(f"Password Strength:{strength}")
-    print(f"Hint: {remarks}")
-
-def ask_pwd(another_pwd=False):
-    valid = False
-    if another_pwd:
-        choice=input('Do you want to enter another pwd (y/n): ')
+    if length >= 8:
+        score += 1
     else:
-        choice=input('Do you want to check pwd (y/n): ')
+        suggestions.append("Use at least 8 characters.")
 
-    while not valid:
-        if choice.lower() == 'y':
-            return True
-        elif choice.lower() == 'n':
-            return False
-        else:
-            print('Invalid, Try Again')
+    if re.search(r'[a-z]', password):
+        score += 1
+    else:
+        suggestions.append("Add lowercase letters.")
 
-if __name__ == '__main__':
-    print('+++ welcome to PWD checker +++')
-    ask_pw = ask_pwd()
-    while ask_pw:
-        check_pwd()
-        ask_pw = ask_pwd(True)
+    if re.search(r'[A-Z]', password):
+        score += 1
+    else:
+        suggestions.append("Add uppercase letters.")
+
+    if re.search(r'\d', password):
+        score += 1
+    else:
+        suggestions.append("Add digits.")
+
+    if re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
+        score += 1
+    else:
+        suggestions.append("Add special symbols.")
+
+    common_passwords = ['password', '123456', 'qwerty', 'letmein']
+    if password.lower() in common_passwords:
+        suggestions.append("Avoid common passwords.")
+
+    print("\nPassword Score:", score, "/ 5")
+    if score == 5:
+        print("✅ Strong password!")
+    else:
+        print("❌ Weak password. Suggestions:")
+        for tip in suggestions:
+            print("-", tip)
+
+if __name__ == "__main__":
+    pwd = input("Enter your password to check strength: ")
+    check_strength(pwd)
