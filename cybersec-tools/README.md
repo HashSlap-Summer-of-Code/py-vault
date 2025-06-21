@@ -10,10 +10,11 @@ A script that checks the strength of a password based on:
 Run:
 ```bash
 python password-strength.py
-=======
+```
+
 # 🔒 Port Scanner (Educational Cybersecurity Tool)
 
-A simple TCP port scanner built with Python’s built-in `socket` module. Useful for educational and ethical cybersecurity testing.
+##A simple TCP port scanner built with Python’s built-in `socket` module. Useful for educational and ethical cybersecurity testing.
 
 ## 📦 Features
 
