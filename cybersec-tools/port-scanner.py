@@ -2,7 +2,8 @@
 
 import socket
 import sys
-
+  
+  
 def scan_ports(host, start_port, end_port):
     print(f"\n[~] Scanning {host} from port {start_port} to {end_port}...\n")
 
