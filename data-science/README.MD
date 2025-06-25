@@ -17,3 +17,10 @@ Make sure you have the following installed:
 
 ```bash
 pip install pandas matplotlib seaborn scipy
+
+## ▶️ Usage
+
+To run the analysis on the example CSV:
+
+```bash
+python data-analysis.py example-data.csv
