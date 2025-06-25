@@ -20,7 +20,8 @@ pip install pandas matplotlib seaborn scipy
 
 ## ▶️ Usage
 
-To run the analysis on the example CSV:
+To run the analysis on a CSV file:
 
 ```bash
-python data-analysis.py example-data.csv
+python data-analysis.py path/to/your-file.csv
+
