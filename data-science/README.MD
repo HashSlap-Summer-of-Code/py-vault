@@ -2,10 +2,14 @@
 
 This Python script loads a CSV file, computes basic statistics (mean, median, mode) for numerical columns, and visualizes the data using histograms.
 
-## 📂 Files
+## 📂 Exmaple Data File
 
-- `data-analysis.py`: Main script for analysis.
-- `README.md`: Project documentation and usage guide.
+Name,Age,Salary
+Alice,30,70000
+Bob,25,50000
+Charlie,35,80000
+David,30,70000
+Eva,40,90000
 
 ## 📦 Requirements
 
