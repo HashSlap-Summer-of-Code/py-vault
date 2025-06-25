@@ -35,3 +35,9 @@ def main(file_path):
         print(f"  Mode: {stat['mode']}\n")
 
     visualize_data(df)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Analyze CSV data and plot basic stats.")
+    parser.add_argument("file", help="Path to the CSV file.")
+    args = parser.parse_args()
+    main(args.file)
