@@ -26,5 +26,3 @@ To run the analysis on a CSV file:
 ```bash
 python data-analysis.py path/to/your-file.csv
 
-##
-
