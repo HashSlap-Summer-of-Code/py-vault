@@ -12,9 +12,11 @@ This is a simple Python script that generates cryptocurrency wallet addresses an
 - 🌐 Generates Ethereum addresses and hex private keys
 - 🔒 No keys are stored or saved — all output is printed securely
 
+
+
 ---
 
-## Usage:
+## 🔧 Usage:
     `python wallet-generator.py bitcoin`
     `python wallet-generator.py ethereum`
 
