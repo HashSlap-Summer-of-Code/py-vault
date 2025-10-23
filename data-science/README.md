@@ -62,6 +62,12 @@ Performance_Score:
 ```
 ![Example Histogram](https://github.com/FionaG26/py-vault/blob/feature/data-analysis-script/data-science/Figure_1.png?raw=true)
 
+## 🧩 Environment
+
+- **Operating System:** Ubuntu 22.04 LTS  
+- **Python Version:** Python 3.12  
+- **Libraries Used:** pandas, matplotlib, seaborn, scipy
+
 🧑‍💻 Author
 
 Developed by [FionaG26](https://github.com/FionaG26)
