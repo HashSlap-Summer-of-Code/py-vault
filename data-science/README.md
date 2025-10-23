@@ -34,7 +34,7 @@ python3 data-analysis.py example-data.csv
 ```
 📁 Example Data
 
-example-data.csv includes 10 employees with details such as Age, Experience (Years), Salary, and Performance Score.
+[example-data.csv](https://github.com/FionaG26/py-vault/blob/feature/data-analysis-script/data-science/example-data.csv) includes 10 employees with details such as Age, Experience (Years), Salary, and Performance Score.
 
 📈 Example Output
 ```yaml
