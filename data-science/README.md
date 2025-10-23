@@ -1,54 +1,62 @@
-Data Analysis Script
+# 📊 Data Analysis Script
 
-This script (data-analysis.py) performs basic data analysis on a CSV file. It loads your dataset, computes key statistics (mean, median, mode), and visualizes distributions using Matplotlib.
+This script (`data-analysis.py`) performs **basic data analysis** on CSV files.  
+It loads data, computes summary statistics (mean, median, mode), and visualizes numeric columns using **Matplotlib**.
 
-📊 Features
+---
 
-Load CSV files with numeric columns
+## 🚀 Features
+✅ Load CSV files  
+✅ Compute:
+- Mean  
+- Median  
+- Mode  
 
-Compute basic statistics:
+✅ Visualize numeric columns with histograms  
 
-Mean
+---
 
-Median
+## 🧰 Requirements
+Install dependencies:
 
-Mode
-
-Generate histograms for visual analysis
-
-🧰 Requirements
-
-Install dependencies before running:
-
+```bash
 pip install pandas matplotlib seaborn scipy
-
-
-If you’re on Linux and plots don’t display:
-
+```
+If plots don’t appear on Linux:
+```bash
 sudo apt install python3-tk
+```
+💻 Usage
 
-🚀 Usage
-
-Run the script from the command line:
-
+Run the script from your project directory:
+```bash
 python3 data-analysis.py example-data.csv
-
-Example Output
-Basic Statistics:
-
-height:
-  Mean: 170.5
-  Median: 170.0
-  Mode: [172.0]
-
-weight:
-  Mean: 70.2
-  Median: 69.5
-  Mode: [68.0]
-
-
-The script will also display histograms for each numeric column.
-
+```
 📁 Example Data
 
-example-data.csv is provided as a sample dataset containing numeric columns (e.g., height, weight, age) for testing.
+example-data.csv includes 10 employees with details such as Age, Experience (Years), Salary, and Performance Score.
+
+📈 Example Output
+```yaml
+📈 Basic Statistics:
+
+Age:
+  Mean: 33.1
+  Median: 31.5
+  Mode: [25, 27, 28, 29, 30, 33, 35, 38, 41, 45]
+
+Experience_Years:
+  Mean: 7.2
+  Median: 6.5
+  Mode: [2, 3, 4, 5, 6, 7, 8, 10, 12, 15]
+
+Salary:
+  Mean: 65100.0
+  Median: 64500.0
+  Mode: [58000, 60000, 61000, 62000, 64000, 65000, 68000, 70000, 71000, 72000]
+
+Performance_Score:
+  Mean: 82.1
+  Median: 82.5
+  Mode: [70, 73, 76, 78, 80, 85, 88, 89, 90, 92]
+```
