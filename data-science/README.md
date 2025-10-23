@@ -60,3 +60,10 @@ Performance_Score:
   Median: 82.5
   Mode: [70, 73, 76, 78, 80, 85, 88, 89, 90, 92]
 ```
+![Example Histogram](https://github.com/FionaG26/py-vault/blob/feature/data-analysis-script/data-science/Figure_1.png?raw=true)
+
+🧑‍💻 Author
+
+Developed by [FionaG26](https://github.com/FionaG26)
+
+as part of HashSlap Summer of Code — Issue #13 (Add a Data Analysis Script)
